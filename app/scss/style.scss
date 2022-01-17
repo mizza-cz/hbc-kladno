@@ -1,0 +1,234 @@
+@import 'vars';
+@import 'global';
+@import 'scoarboard';
+@import 'header';
+@import 'clanek';
+@import 'footer';
+@import 'news';
+
+// top-clanky hp
+.hp-clanky {
+  &__inner {
+    display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
+    .clanek {
+      padding: 0 16px;
+      max-width: 50%;
+      flex: 0 0 50%;
+
+      &__img {
+        height: 374px;
+        @media (max-width: 1240px) {
+          height: 320px;
+        }
+      }
+      &__content {
+        padding: 24px 32px;
+        @media (max-width: 1240px) {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+// ig galerie hp
+.ig-galerie {
+  text-align: center;
+  margin-bottom: 32px;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -4px;
+    margin-left: -4px;
+    justify-content: center;
+  }
+  &__item {
+    padding: 0 4px;
+    flex: 0 0 15.2%;
+    display: block;
+    max-width: 15.2%;
+    height: 200px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h3 {
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    color: $blue;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-image: url('../images/svg/ig-blue.svg');
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+/// pohary hp
+.pohary {
+  h3 {
+    text-transform: uppercase;
+    color: $blue;
+    margin-bottom: 16px;
+  }
+  &__row {
+    display: flex;
+    border: 1px solid $blue;
+    padding: 40px 16px 36px;
+  }
+  &__link {
+    &:hover {
+      h5 {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__item {
+    max-width: 25%;
+    flex: 0 0 25%;
+    text-align: center;
+    padding: 22px 16px 23px 16px;
+
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    p {
+      font-size: 0.75rem;
+      color: $blue;
+    }
+    & + & {
+      border-left: 1px solid $blue;
+    }
+  }
+  &__img {
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: center;
+  }
+}
+// partners
+.partners {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0 16px;
+    a {
+      display: block;
+      max-height: 104px;
+      width: 200px;
+      margin-bottom: 24px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+@media (max-width: 1240px) {
+  .ig-galerie__item {
+    max-width: 30%;
+    flex: 0 0 30%;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 1040px) {
+  .pohary__row {
+    flex-wrap: wrap;
+  }
+
+  .pohary__item {
+    &:nth-of-type(2),
+    &:nth-of-type(4) {
+      border-left: 1px solid $blue !important;
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      padding-top: 32px;
+    }
+    &:first-child,
+    &:nth-of-type(2) {
+      border-bottom: 1px solid $blue;
+    }
+  }
+  .pohary__item + .pohary__item {
+    border-left: none;
+  }
+  .pohary__item {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  .hp-clanky__inner {
+    flex-wrap: wrap;
+    .clanek {
+      max-width: 100%;
+      flex: 100%;
+      &__box {
+        width: 100%;
+      }
+      &__img {
+        height: auto;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .ig-galerie__item {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .hp-clanky__inner {
+    .clanek {
+      margin-bottom: 32px;
+      &__content {
+        top: 0;
+        margin-right: 0;
+        padding: 24px;
+      }
+      &__img {
+        height: 240px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .ig-galerie__item {
+    height: 140px;
+  }
+  .pohary__item {
+    max-width: 100%;
+    flex: 100%;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  .pohary__row {
+    padding: 24px 16px 0px;
+  }
+  .pohary__item:nth-of-type(2),
+  .pohary__item:nth-of-type(4) {
+    border-left: none !important;
+  }
+  .pohary__item:first-child,
+  .pohary__item:nth-of-type(2),
+  .pohary__item:nth-of-type(3) {
+    border-bottom: 1px solid $blue;
+  }
+}
+
+@import 'media';

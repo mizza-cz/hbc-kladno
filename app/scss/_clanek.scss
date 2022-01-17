@@ -1,0 +1,52 @@
+.clanek {
+  margin-bottom: -16px;
+  a.clanek__box:hover {
+    h3 {
+      text-decoration: underline;
+    }
+  }
+  &__box {
+    position: relative;
+  }
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    background-color: $blue;
+    position: relative;
+    padding: 32px 48px;
+    margin-right: 48px;
+    top: -48px;
+    p {
+      font-size: 0.875rem;
+      color: #000;
+    }
+    h1,
+    h3 {
+      color: #fff;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-bottom: 5px;
+      line-height: 1.2;
+    }
+  }
+}
+.tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $dark-blue;
+  background-color: $light-blue;
+  border-radius: 3px;
+  display: inline-block;
+  position: absolute;
+  text-transform: uppercase;
+  padding: 4px 4px 4px 4px;
+  top: -12px;
+  padding: 4px 16px;
+}

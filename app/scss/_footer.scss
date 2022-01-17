@@ -1,0 +1,43 @@
+.footer {
+  background: $blue;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 29px 0;
+    font-size: 0.875rem;
+    align-items: center;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+  .copyright {
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__social {
+    display: block;
+    p {
+      margin-bottom: 12px;
+    }
+    .social {
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+  .footer__inner {
+    display: block;
+    text-align: center;
+    .copyright {
+      margin-bottom: 8px;
+    }
+  }
+}
+
