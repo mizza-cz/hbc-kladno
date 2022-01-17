@@ -115,16 +115,7 @@
     }
   }
 }
-.typography {
-  p {
-    font-size: 1.25rem;
-    line-height: 1.25;
-    margin-bottom: 16px;
-    &:last-child {
-      margin-bottom: 32px;
-    }
-  }
-}
+
 .galerie {
   margin-bottom: 32px;
   &__row {
@@ -214,5 +205,8 @@
   }
   h1 {
     font-size: 1.7rem;
+  }
+  .typography h1 {
+    margin-bottom: 16px;
   }
 }
