@@ -54,6 +54,10 @@ h5 {
   font-size: 1rem;
   line-height: 1.125;
 }
+h6 {
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
 body {
   font-family: 'Gemunu Libre', sans-serif;
   font-weight: 400;
@@ -111,6 +115,58 @@ body {
   padding-top: 32px;
   color: #fff;
   padding-bottom: 32px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+
+    h1 {
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+}
+.select__box {
+  display: flex;
+  align-items: center;
+  margin-right: -4px;
+  h6 {
+    width: 100%;
+    text-transform: uppercase;
+    margin-right: 12px;
+  }
+}
+select {
+  line-height: 1.13;
+  font-family: inherit;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: $blue;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 2px 27px 2px 16px;
+  letter-spacing: 0;
+  width: 100%;
+  min-width: 102px;
+  box-sizing: border-box;
+  margin: 0 4px;
+  height: 24px;
+  outline: none;
+  background-image: url('../images/svg/angle-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 8px 12px;
+  transition: 0.3s all linear;
 }
 .ban {
   display: block;
