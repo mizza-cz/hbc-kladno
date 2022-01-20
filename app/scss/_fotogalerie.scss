@@ -1,0 +1,10 @@
+.fotogalerie {
+  .galerie__item {
+    height: max-content;
+    &:hover {
+      h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+}
