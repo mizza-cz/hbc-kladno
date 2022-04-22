@@ -55,3 +55,24 @@ $(function(){
     });
 // end
 })
+
+tablesWrap();
+iframesWrap();
+
+// TABLE (wysiwyg editor) responsive
+function tablesWrap() {
+	var contentTables = document.querySelectorAll(".article__content table"),
+      i;
+
+	for (i = 0; i < contentTables.length; ++i) {
+		contentTables[i].classList.add("table");
+
+    var contentTableWrap = document.createElement("div");
+
+    contentTableWrap.classList.add("table-responsive");
+
+		contentTables[i].parentNode.insertBefore(contentTableWrap, contentTables[i]);
+
+		contentTableWrap.appendChild(contentTables[i]);
+	}
+}

@@ -1,0 +1,21 @@
+.table-responsive{
+   overflow-x: auto;
+    background-color: #fff;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  
+    .num{
+       max-width: 30px;
+    }
+    .team{
+      text-align: left;
+
+    }
+    .team a {
+       width: max-content;
+    }
+}
+th{
+   color: #000;
+}
